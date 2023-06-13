@@ -1,9 +1,3 @@
-[![Build Status](https://travis-ci.com/Lidiadev/ecommerce-api.svg?branch=master)](https://travis-ci.com/github/Lidiadev/ecommerce-api)
-
-ECommerce is an ASP.NET Core Web API which serves the domain of Customers and Orders.
-
-## Domain 
-
 * Customer has Name and Email. 
 * Customer can have multiple Orders. 
 * Order can belong to only one Customer. 
@@ -34,18 +28,6 @@ ECommerce is an ASP.NET Core Web API which serves the domain of Customers and Or
 The architecture patterns used for this application are based on DDD (Domain-Driven Design) approach 
 following the principles of Clean Architecture.
 
-![architecture overview](images/architecture.PNG)
-
-### Domain
-
-It is responsible for representing concepts of the business and business rules.
-This contains all entities, interfaces, types and logic specific to the domain layer:
-
-* domain entities with data and behaviour
-* value objects
-* repository contracts.
-
-
 ### Application
 
 It is dependent on the domain layer, but has no dependencies on any other layer or project. 
@@ -70,11 +52,6 @@ Therefore only *Startup.cs* references Infrastructure.
 
 ### Database Configuration
 The solution is configured to use a MSSQL DB.
-
-## Continuous Integration
-
-**Travis CI** has been used to run the tests.
-Each pushed commit runs the unit tests.
 
 ### Testability
 * Unit tests
